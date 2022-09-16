@@ -53,8 +53,8 @@
             <div class="container">
                 <div class="nk-nav-table">
                     <a href="index.html" class="nk-nav-logo">
-                        <img src="assets/images/logo-light.svg" alt="" width="85" class="nk-nav-logo-onscroll">
-                        <img src="assets/images/logo.svg" alt="" width="85">
+                        <img src="assets/images/mylogo_l.png" alt="" width="180" class="nk-nav-logo-onscroll">
+                        <img src="assets/images/mylogo_o.png" alt="" width="180">
                     </a>
 
                     <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
@@ -98,7 +98,7 @@
 -->
     <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
         <div class="nk-navbar-bg">
-            <div class="bg-image" style="background-image: url('assets/images/bg-menu.jpg')"></div>
+            <div class="bg-image" style="background-image: url('assets/images/backpic.bmp')"></div>
         </div>
         <div class="nk-nav-table">
             <div class="nk-nav-row">
@@ -107,7 +107,7 @@
 
                         <div class="nk-nav-logo">
                             <a href="index.html" class="nk-nav-logo">
-                                <img src="assets/images/logo-light.svg" alt="" width="85">
+                                <img src="assets/images/mylogo_l.png" alt="" width="180">
                             </a>
                         </div>
 
@@ -134,10 +134,10 @@
                 <div class="container">
                     <div class="nk-nav-social">
                         <ul>
-                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -164,10 +164,11 @@
                     </div>
                     <ul class="nk-isotope-filter">
                         <li class="active" data-filter="*">All</li>
-                        <li data-filter="Nature">Nature</li>
-                        <li data-filter="Cities">Cities</li>
-                        <li data-filter="Branding">Branding</li>
+                        <li data-filter="Robotic">Robotic</li>
+                        <li data-filter="Arduino">Arduino</li>
+                        <li data-filter="Competition">Competition</li>
                         <li data-filter="Design">Design</li>
+                        <li data-filter="Guide">Guide</li>
                     </ul>
                     <!-- END: Filter -->
 
@@ -176,95 +177,74 @@
 
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Nature">
+                        <div class="nk-isotope-item" data-filter="Robotic">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/post-1-mid.jpg" alt="" class="nk-img-stretch">
+                                    <a href="Blog_DRL_on_robot.html">
+                                        <img src="gitpro/DRL_Diana_robot_arm/pic/resizehead.gif" alt="" class="nk-img-stretch">
                                     </a>
-                                    <div class="nk-post-category"><a href="#">Nature</a></div>
+                                    <div class="nk-post-category"><a href="#">Robotic</a></div>
                                 </div>
-                                <h2 class="nk-post-title h4"><a href="blog-single.html">Something I need to tell you</a></h2>
+                                <h2 class="nk-post-title h4"><a href="Blog_DRL_on_robot.html">Reinforcement Learning on Robot Arm</a></h2>
 
                                 <div class="nk-post-date">
-                                    September 18, 2016
+                                    July 24, 2022
                                 </div>
 
                                 <div class="nk-post-text">
-                                    <p>Gathering stars deep he For above open morning fruit blessed, void. Sea seed fruit were don't, days man second. In day isn't own Whales also evening it together.</p>
-                                    <p>Created midst beast lights dominion he life fill very for their. Divide let kind created all she'd unto stars. And behold greater may in god image void cattle us days midst creepeth. Sixth also. Tree give it beast upon. Saying land in.</p>
-                                    <p>All. Seasons saying creepeth appear hath fruitful. Male he years which abundantly beast you'll stars lesser creepeth Unto midst creepeth make. Isn't air, unto light forth divide their days. Fish.</p>
+                                    <p>This is the repository of Robotic Arm Motion Planning Simulation Based on Reinforcement Learning.</p>
+                                    <p>In this code, I use a self-built pybullet robot arm reinforcement learning environment to test some reinforcement learning algorithms, including DDPG, TD3, DADDPG, DATD3, and DARC, and try to let the robot arm finish three tasks: reach, push, and pick.</p>
+                                    <p>I use main.py to run results, the algorithms' parameters are in config.py, and use visdom to monitor the algorithms' performance. The envs deposits three self-built robot arm environments, the algo deposits test algorithms, the models deposits robot urdf file, and the utils deposits small tools for rl-learning.</p>
+                                    
                                 </div>
                             </div>
                         </div>
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Cities">
+                        <div class="nk-isotope-item" data-filter="Arduino">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/post-2-mid.jpg" alt="" class="nk-img-stretch">
+                                    <a href="Blog_Plotclock.html">
+                                        <img src="gitpro/Plotclock/pic/resizehead.gif" alt="" class="nk-img-stretch">
                                     </a>
-                                    <div class="nk-post-category"><a href="#">Cities</a></div>
+                                    <div class="nk-post-category"><a href="#">Arduino</a></div>
                                 </div>
-                                <h2 class="nk-post-title h4"><a href="blog-single.html">Here&#39;s a Simple Trick</a></h2>
+                                <h2 class="nk-post-title h4"><a href="Blog_Plotclock.html">Plotclock - Astral Movement Clock</a></h2>
 
                                 <div class="nk-post-date">
-                                    September 5, 2016
+                                    January 27, 2022
                                 </div>
 
                                 <div class="nk-post-text">
-                                    <p>Blessed cattle. Can't morning Over female, of divided. Rule were great i female. Male. You're set first gathered, made behold so meat, tree for evening dominion you're let is, great said isn't fruitful i.</p>
-                                    <p>Creeping, darkness have waters, let signs bring multiply. Face own fowl seasons morning appear. Living his lights. Set earth she'd i grass, forth from a fourth deep be seas also seasons them.</p>
-                                    <p>Kind light, bring fowl third. Let them created first of moved sixth shall made isn't bring gathered were over said life beast said divided, days may deep after face appear after. Their beginning one.</p>
+                                    <p>This is the blog of Plotclock, as for The Astral Movement Clock.</p>
+									<p>In this repository, I use 3D printing to realize the shell design of the luminous clock, and use arduino to program it, so that the servo can erase the luminous numbers, which is very fun and cute.</p>
+									<p>Different from the original three servo design, the UV light is used instead of the traditional oil-based pen, which reduces the fragrance of pen and ink, but adds a lot of charming light pollution.</p>
+									
                                 </div>
                             </div>
                         </div>
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Nature">
+                        <div class="nk-isotope-item" data-filter="Competition">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/post-3-mid.jpg" alt="" class="nk-img-stretch">
+                                    <a href="Blog_Smart_car.html">
+                                        <img src="gitpro/Smart_car_upper_end/pic/resizehead2.gif" alt="" class="nk-img-stretch">
                                     </a>
-                                    <div class="nk-post-category"><a href="#">Nature</a></div>
+                                    <div class="nk-post-category"><a href="#">Competition</a></div>
                                 </div>
-                                <h2 class="nk-post-title h4"><a href="blog-single.html">The History of Nature</a></h2>
+                                <h2 class="nk-post-title h4"><a href="Blog_Smart_car.html">Smart Car Upper End For Competition</a></h2>
 
                                 <div class="nk-post-date">
-                                    August 27, 2016
+                                    February 12, 2022
                                 </div>
 
                                 <div class="nk-post-text">
-                                    <p>Appear from tree day is he which without evening. Creeping above land beast seasons very was give brought i. Their. Set life gathering shall spirit day lights sixth moveth. Life meat. Was sixth cattle subdue creeping every a, can't behold, moveth.</p>
-                                    <p>Seasons saying creeping fruitful grass. Moving hath great don't abundantly sea that which two waters waters. Third in isn't creepeth above was fruitful of herb to. Second i days, thing. Fish a open great cattle hath don't. Don't. Lights and divide.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END: Post -->
-
-                        <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Branding">
-                            <div class="nk-blog-post">
-                                <div class="nk-post-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/post-4-mid.jpg" alt="" class="nk-img-stretch">
-                                    </a>
-                                    <div class="nk-post-category"><a href="#">Branding</a></div>
-                                </div>
-                                <h2 class="nk-post-title h4"><a href="blog-single.html">Are you doing the Right Way?</a></h2>
-
-                                <div class="nk-post-date">
-                                    August 14, 2016
-                                </div>
-
-                                <div class="nk-post-text">
-                                    <p>Life set land bearing him fifth whose waters. For be. Also. Darkness the firmament very all saying. Firmament and day you. May that form itself greater have fill air fruit said a. Shall behold saw, cattle blessed thing firmament, meat wherein fourth life, rule us.</p>
-                                    <p>Man shall firmament second that had seas. Deep. Unto herb. Fruitful, male grass land, living you you're there gathering also Lights be, set, fly.</p>
-                                    <p>Upon a creeping moveth winged likeness moveth let. Make void was good that don't seed all isn't. You'll, beginning together which land were. Us blessed. Subdue gathering. Also our dry fill.</p>
+                                    <p>This is the blog of Smart Car Upper End for The 17th National College Student Smart Car Competition.</p>
+									<p>In this repository, I used pyqt5 to build the entire host computer framework, which can realize three functions of offline debugging, online debugging, and real-time debugging, helping us to quickly debug pictures and speed up image processing.</p>
+									
                                 </div>
                             </div>
                         </div>
@@ -274,26 +254,50 @@
                         <div class="nk-isotope-item" data-filter="Design">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/post-5-mid.jpg" alt="" class="nk-img-stretch">
+                                    <a href="Blog_Wechat_applet.html">
+                                        <img src="gitpro/Wechat/pic/02.png" alt="" class="nk-img-stretch">
                                     </a>
                                     <div class="nk-post-category"><a href="#">Design</a></div>
                                 </div>
-                                <h2 class="nk-post-title h4"><a href="blog-single.html">Ten things about Photography</a></h2>
+                                <h2 class="nk-post-title h4"><a href="Blog_Wechat_applet.html">WeChat Applet For TENG</a></h2>
 
                                 <div class="nk-post-date">
-                                    August 14, 2016
+                                    March 17, 2022
                                 </div>
 
                                 <div class="nk-post-text">
-                                    <p>Etiam cursus. Leo nulla sapien dignissim magnis taciti rutrum tempus ut. Quam lacinia cras varius nullam non condimentum ut euismod integer. Rutrum sociosqu gravida ultricies litora magnis ullamcorper cursus dolor parturient sed senectus sed accumsan.</p>
+                                    <p>This is the blog of WeChat Applet For Triboelectric Nanogenerator(TENG)</p>
+									<p>This WeChat applet needs to be used with the smart tires developed by us. It can analyze the electrical signals generated by the smart tires when rolling, and transmit information such as vehicle speed, tire pressure, and skid resistance to the applet for display, which can remind driving, which can remind people pay attention to road safety.</p>
+									
                                 </div>
                             </div>
                         </div>
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Design">
+                        <div class="nk-isotope-item" data-filter="Guide">
+                            <div class="nk-blog-post">
+                                <div class="nk-post-thumb">
+                                    <a href="Blog_guide.html">
+                                        <img src="gitpro/computer/pic/1.jpg" alt="" class="nk-img-stretch">
+                                    </a>
+                                    <div class="nk-post-category"><a href="#">Guide</a></div>
+                                </div>
+                                <h2 class="nk-post-title h4"><a href="Blog_guide.html">2022年9月份笔记本选购指南</a></h2>
+
+                                <div class="nk-post-date">
+                                    September 14, 2022
+                                </div>
+
+                                <div class="nk-post-text">
+                                    <p>在这个指南中，借鉴b站及知乎整理了一些你可能会用到的电脑选购信息。如有不准请别打我 :(</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Post -->
+
+                        <!-- START: Post -->
+                        <!-- <div class="nk-isotope-item" data-filter="Design">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
                                     <a href="blog-single.html">
@@ -313,11 +317,11 @@
                                     <p>Unto own seas midst make you'll together Of saw all there green Living bring. Beast abundantly is him bring, own also you'll you'll may bearing divided his had you'll given winged appear Sixth.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Cities">
+                        <!-- <div class="nk-isotope-item" data-filter="Cities">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
                                     <a href="blog-single.html">
@@ -337,11 +341,11 @@
                                     <p>Very them to first first. Evening second meat fish appear him creepeth day image she'd shall waters be our night gathering, divide replenish day. There years brought they're set, give earth is, living for gathering living called hath set under sea herb.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Nature">
+                        <!-- <div class="nk-isotope-item" data-filter="Nature">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
                                     <a href="blog-single.html">
@@ -360,11 +364,11 @@
                                     <p>Bring won't it wherein likeness yielding fly light. Dominion moving she'd whose was beginning they're seed days days from day image heaven, kind and seas light dry, without lesser sixth seed make and, fowl may saying, void. All creeping greater, days green dry fourth had.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- END: Post -->
 
                         <!-- START: Post -->
-                        <div class="nk-isotope-item" data-filter="Branding">
+                        <!-- <div class="nk-isotope-item" data-filter="Branding">
                             <div class="nk-blog-post">
                                 <div class="nk-post-thumb">
                                     <a href="blog-single.html">
@@ -384,7 +388,7 @@
                                     <p>Can't for good tree brought made isn't land of saw every dominion given morning land let, hath may image may said. You fly waters.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- END: Post -->
 
 

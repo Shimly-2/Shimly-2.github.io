@@ -97,7 +97,7 @@
 -->
     <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
         <div class="nk-navbar-bg">
-            <div class="bg-image" style="background-image: url('assets/images/bg-menu.jpg')"></div>
+            <div class="bg-image" style="background-image: url('assets/images/backpic.bmp')"></div>
         </div>
         <div class="nk-nav-table">
             <div class="nk-nav-row">
@@ -106,7 +106,7 @@
 
                         <div class="nk-nav-logo">
                             <a href="index.html" class="nk-nav-logo">
-                                <img src="assets/images/logo-light.svg" alt="" width="85">
+                                <img src="assets/images/mylogo_l.png" alt="" width="180">
                             </a>
                         </div>
 
@@ -133,10 +133,10 @@
                 <div class="container">
                     <div class="nk-nav-social">
                         <ul>
-                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -151,16 +151,12 @@
         <!-- START: Header Title -->
         <div class="nk-header-title nk-header-title-lg">
             <div class="bg-image">
-                <div style="background-image: url('assets/images/post-6.jpg');"></div>
+                <div style="background-image: url('gitpro/DRL_Diana_robot_arm/pic/result2.gif');"></div>
 
             </div>
             <div class="nk-header-table">
                 <div class="nk-header-table-cell">
                     <div class="container">
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -179,24 +175,63 @@
 
                     <!-- START: Post -->
                     <div class="nk-blog-post nk-blog-post-single">
-                        <h1 class="display-4">Why you should Always First</h1>
+                        <h1 class="display-4">Deep Reinforcement Learning on Robot Arm</h1>
 
                         <div class="nk-post-meta">
-                            <div class="nk-post-date">August 14, 2016</div>
-                            <div class="nk-post-category"><a href="#">Design</a></div>
-                            <div class="nk-post-comments-count">2 Comments</div>
+                            <div class="nk-post-date">July 24, 2022</div>
+                            <div class="nk-post-category"><a href="#">Robotic</a></div>
+                            <div class="nk-post-comments-count">1 Comments</div>
                         </div>
 
                         <!-- START: Post Text -->
                         <div class="nk-post-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus orci a purus lacinia consectetur. Vestibulum rutrum ex in odio placerat dictum. Morbi sit amet tortor mollis, tincidunt magna a, iaculis nisl. Cras varius odio a arcu rutrum, nec posuere lacus imperdiet. Proin iaculis, nibh eleifend elementum pulvinar, erat nisl consequat quam, ac ornare est sem nec libero. Fusce ac sagittis quam. Phasellus mattis, nunc a venenatis laoreet, est ipsum consectetur turpis, in ullam corper urna tortor eu purus.</p>
-                            <p>Quisque cursus risus id ante fermentum, in auctor quam consectetur. Vestibulum est nisi, tempus ac vehicula sit amet, blandit et sapien. Ut congue dui enim, at viverra nisl tempor a. Donec in enim nec massa lacinia porta. Nullam lobortis, enim aliquam congue bibendum, libero turpis tincidunt enim, vel dapibus justo lectus et risus. Proin eget mi a tortor laoreet dictum.</p>
+                            <p>This is the repository of Robotic Arm Motion Planning Simulation Based on Reinforcement Learning.</p>
+							<h3 class="display-55">Overview</h3>
+                            <p>In this code, I use a self-built pybullet robot arm reinforcement learning environment to test some reinforcement learning algorithms, including DDPG, TD3, DADDPG, DATD3, and DARC, and try to let the robot arm finish three tasks: reach, push, and pick.</p>
+							<p>I use main.py to run results, the algorithms' parameters are in config.py, and use visdom to monitor the algorithms' performance. The envs deposits three self-built robot arm environments, the algo deposits test algorithms, the models deposits robot urdf file, and the utils deposits small tools for rl-learning.</p>
 
-                            <blockquote>
+                            <h3 class="display-55">Requirements</h3>
+							<ul>
+								<li>python : 3.7.11</li>
+								<li>mujoco_py : 2.1.5</li>
+								<li>torch : 1.6.0+cu101</li>
+								<li>gym : 0.19.0</li>
+								<li>pybullet : 3.0.6</li>
+								<li>visdom : 0.1.8.9</li>
+							</ul>
+							
+							<h3 class="display-55">Test algorithm</h3>
+							<ul>
+								<li>DDPG</li>
+								<li>TD3</li>
+								<li>DADDPG</li>
+								<li>DATD3</li>
+								<li>DARC(AAAI 2022, Efficient Continuous Control with Double Actors and Regularized Critics )</li>
+							</ul>
+							
+							<h3 class="display-55">How to use</h3>
+							<h3 class="display-66">Start visdom</h3>
+							<code>python -m visdom.server</code>
+							<p></p>
+							
+							<h3 class="display-66">Run simulation</h3>
+							<code>python main.py run --env=<envrionment name> --algo=<algorithm name> --vis_name=<visdom server name> </code>
+							<p></p>
+							<p>I use fire console to run my code, so use the following commands to run the simulation, you also can change the config in config.py instead.</p>
+							
+							<h3 class="display-55">Some results</h3>
+							<h3 class="display-66">Training process</h3>
+							<img src="gitpro/DRL_Diana_robot_arm/pic/result1.gif" width=100%/>
+							<p></p>
+							<h3 class="display-66">Performance</h3>
+							<img src="gitpro/DRL_Diana_robot_arm/pic/result2.png" width=100%/>
+							<p></p>
+							<h3 class="display-66">Online comparison</h3>
+							<img src="gitpro/DRL_Diana_robot_arm/pic/result3.png" width=100%/>
+							
+							<!-- <blockquote>
                                 <em>Donec consectetur arcu eu diam cursus consectetur. Interdum malesuada faucibus. Morbi dapibus eros vitae nisi blandit lacinia.</em>
-                            </blockquote>
-
-                            <p>Pellentesque viverra nisl a erat volutpat commodo. Etiam sem justo, pellentesque egestas finibus at, rutrum efficitur ex. Donec facilisis magna in mauris fermentum, sit amet porttitor lorem dictum. Donec in purus elementum, sagittis magna sit amet, auctor enim. Duis purus ex, interdum ac lacus in, ullamcorper vestibulum urna. Duis ornare nec purus ut laoreet.</p>
+                            </blockquote> -->
 
                         </div>
                         <!-- END: Post Text -->
@@ -204,9 +239,8 @@
                         <!-- START: Post Share -->
                         <div class="nk-post-share">
                             <strong>Share:</strong>
-                            <a href="#" title="Share page on Facebook" data-share="facebook">Facebook</a>,
-                            <a href="#" title="Share page on Twitter" data-share="twitter">Twitter</a>,
-                            <a href="#" title="Share page on Pinterest" data-share="pinterest">Pinterest</a>
+                            <a href="#" title="Share page on Github" data-share="Github">@Github</a>,
+                            <a href="#" title="Share page on Gitee" data-share="Gitee">@Gitee</a>
                         </div>
                         <!-- END: Post Share -->
                     </div>
@@ -228,7 +262,7 @@
                         <div class="nk-gap-1"></div>
 
                         <!-- START: Comment -->
-                        <div class="nk-comment">
+                        <!-- <div class="nk-comment">
                             <div class="nk-comment-avatar">
                                 <a href="#">
                                     <img src="assets/images/avatar-1.jpg" alt="">
@@ -241,10 +275,10 @@
                             </div>
                             <div class="nk-comment-text">
                                 <p>Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
-                            </div>
+                            </div> -->
 
                             <!-- START: Comment -->
-                            <div class="nk-comment">
+                            <!-- <div class="nk-comment">
                                 <div class="nk-comment-avatar">
                                     <a href="#">
                                         <img src="assets/images/avatar-2.jpg" alt="">
@@ -258,25 +292,25 @@
                                 <div class="nk-comment-text">
                                     <p>Aenean eget varius augue, nec gravida lectus. Pellentesque in imperdiet us, ac efficitur risus. Etiam laoreet dapibus lorem vitae aliquam. Sed elementum ligula, molestie consectetur massa rhoncus at.</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- END: Comment -->
-                        </div>
+                        <!-- </div> -->
                         <!-- END: Comment -->
 
                         <!-- START: Comment -->
                         <div class="nk-comment">
                             <div class="nk-comment-avatar">
                                 <a href="#">
-                                    <img src="assets/images/avatar-3.jpg" alt="">
+                                    <img src="assets/images/head.jpg" alt="">
                                 </a>
                             </div>
                             <div class="nk-comment-meta">
-                                <div class="nk-comment-name"><a href="#">Katie Anderson</a></div>
+                                <div class="nk-comment-name"><a href="#">JYY</a></div>
                                 <div class="nk-comment-reply"><a href="#">Reply</a></div>
-                                <div class="nk-comment-date">21 September, 2016</div>
+                                <div class="nk-comment-date">22 JULY, 2022</div>
                             </div>
                             <div class="nk-comment-text">
-                                <p>To set. Lights likeness after, stars void in doesn't subdue.</p>
+                                <p>You are so good! You still have hair!!!</p>
                             </div>
                         </div>
                         <!-- END: Comment -->
@@ -343,15 +377,15 @@
                 <div class="container text-xs-center">
                     <div class="nk-footer-social">
                         <ul>
-                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://github.com/Shimly-2"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://gitee.com/jin-yiyang"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
 
                     <div class="nk-footer-text">
-                        <p>2016 &copy; Design by Unvab. Code by nK</p>
+                        <p>2022 &copy; Design by Shimly-2</p>
                     </div>
                 </div>
             </div>
