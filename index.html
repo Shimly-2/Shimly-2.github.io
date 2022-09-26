@@ -230,7 +230,7 @@
                                 <span class="pe-7s-portfolio"></span>
                             </div>
                             <div class="nk-ibox-cont">
-                                <div class="nk-ibox-title" data-wow-duration="500ms"><span data-speed="3000" data-to="27">27</span></div>
+                                <div class="nk-ibox-title"><span class="num" data-val="27">00</span></div>
                                 <div class="nk-ibox-text">Projects Completed</div>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                                 <span class="pe-7s-clock"></span>
                             </div>
                             <div class="nk-ibox-cont">
-                                <div class="nk-ibox-title" data-wow-duration="500ms"><span data-speed="5000" data-to="1024">1024</span></div>
+                                <div class="nk-ibox-title"><span class="num" data-val="1024">0000</span></div>
                                 <div class="nk-ibox-text">Working Hours</div>
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                                 <span class="pe-7s-star"></span>
                             </div>
                             <div class="nk-ibox-cont">
-                                <div class="nk-ibox-title" data-wow-duration="500ms"><span data-speed="3000" data-to="0">0</span></div>
+                                <div class="nk-ibox-title"><span  class="num" data-val="134">000</span></div>
                                 <div class="nk-ibox-text">Positive Feedbacks</div>
                             </div>
                         </div>
@@ -263,13 +263,13 @@
                                 <span class="pe-7s-like"></span>
                             </div>
                             <div class="nk-ibox-cont">
-                                <div class="nk-ibox-title" data-wow-duration="500ms"><span data-speed="4000" data-to="520">520</span></div>
+                                <div class="nk-ibox-title" ><span class="num" data-val="520">000</span></div>
                                 <div class="nk-ibox-text">Happy Clients</div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            
             </div>
             <div class="nk-gap-5 mnt-6"></div>
         </div>
@@ -697,20 +697,20 @@
 				    </div>
 				</div>
 				
-				<!-- <div class="nk-isotope-item" data-filter="Game">
+				<div class="nk-isotope-item" data-filter="Game">
 				    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1" style="border-radius:2em;">
-				        <a href="game/PlantsvsZombies/index.html" class="nk-portfolio-item-link"></a>
+				        <a href="game/2048/index.html" class="nk-portfolio-item-link"></a>
 				        <div class="nk-portfolio-item-image">
-				            <div style="background-image: url('game/PlantsvsZombies/head.png'); border-radius:2em;"></div>
+				            <div style="background-image: url('game/2048/head.png'); border-radius:2em;"></div>
 				        </div>
 				        <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center" style="border-radius:2em;">
 				            <div>
-				                <h2 class="portfolio-item-title h5">植物大战僵尸</h2>
-				                <div class="portfolio-item-category-2">脑子是个好东西</div>
+				                <h2 class="portfolio-item-title h5">2048</h2>
+				                <div class="portfolio-item-category-2">经典永存</div>
 				            </div>
 				        </div>
 				    </div>
-				</div> -->
+				</div>
 				
 				<div class="nk-isotope-item" data-filter="Tool">
 				    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1" style="border-radius:2em;">
@@ -722,6 +722,21 @@
 				            <div>
 				                <h2 class="portfolio-item-title h5">GIF编辑器</h2>
 				                <div class="portfolio-item-category-2">好东西</div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				
+				<div class="nk-isotope-item" data-filter="Game">
+				    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1" style="border-radius:2em;">
+				        <a href="game/tower/index.html" class="nk-portfolio-item-link"></a>
+				        <div class="nk-portfolio-item-image">
+				            <div style="background-image: url('game/tower/head.png'); border-radius:2em;"></div>
+				        </div>
+				        <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center" style="border-radius:2em;">
+				            <div>
+				                <h2 class="portfolio-item-title h5">盖塔楼</h2>
+				                <div class="portfolio-item-category-2">经典永存</div>
 				            </div>
 				        </div>
 				    </div>
@@ -1035,6 +1050,24 @@
 
     <script src="assets/js/combined.js"></script>
     <script src="assets/js/jquery.countTo.js"></script>
+	<!-- Script -->
+	<script type="text/javascript">
+		let valueDisplays = document.querySelectorAll(".num");
+		let interval = 5000;
+	
+		valueDisplays.forEach((valueDisplay) => {
+			let startValue = 0;
+			let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+			let duration = Math.floor(interval / endValue);
+			let counter = setInterval(function() {
+				startValue += 1;
+				valueDisplay.textContent = startValue;
+				if (startValue == endValue) {
+					clearInterval(counter);
+				}
+			}, duration);
+		});
+	</script>
     <!-- END: Scripts -->
 
 
