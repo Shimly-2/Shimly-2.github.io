@@ -16,7 +16,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Shmily-Plotclock blog</title>
+    <title>Shmily-Garbage Classfication Blog</title>
 
     <meta name="description" content="Snow - Clean & Minimal Portfolio HTML template.">
     <meta name="keywords" content="portfolio, clean, minimal, blog, template, portfolio website">
@@ -44,7 +44,7 @@
 
 
 
-    <header class="nk-header">
+    <header class="nk-header nk-header-opaque">
         <!--
         START: Navbar
     --><style type="text/css">
@@ -61,7 +61,7 @@
     		 font-size: 100%;
          }
      </style>
-        <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top">
+        <nav class="nk-navbar nk-navbar-top nk-navbar-sticky">
             <div class="container">
                 <div class="nk-nav-table">
                     <a href="index.html" class="nk-nav-logo">
@@ -147,9 +147,6 @@
              loveTime[3].innerHTML = seconde;
          },100)
      </script>
-    
-
-
 
 
     <!--
@@ -211,7 +208,7 @@
         <!-- START: Header Title -->
         <div class="nk-header-title nk-header-title-lg">
             <div class="bg-image">
-                <div style="background-image: url('gitpro/Plotclock/pic/result1.gif');"></div>
+                <div style="background-image: url('gitpro/Garbage/1.jpg');"></div>
 
             </div>
             <div class="nk-header-table">
@@ -235,72 +232,49 @@
 
                     <!-- START: Post -->
                     <div class="nk-blog-post nk-blog-post-single">
-                        <h1 class="display-4">Plotclock - Astral Movement Clock</h1>
+                        <h1 class="display-4">Garbage Classification</h1>
 
                         <div class="nk-post-meta">
-                            <div class="nk-post-date">January 27, 2022</div>
-                            <div class="nk-post-category"><a href="#">Arduino</a></div>
+                            <div class="nk-post-date">May 14, 2021</div>
+                            <div class="nk-post-category"><a href="#">Robotic</a></div>
                             <div class="nk-post-comments-count">1 Comments</div>
                         </div>
 
                         <!-- START: Post Text -->
                         <div class="nk-post-text">
-                            <p>This is the blog of Plotclock, as for The Astral Movement Clock.</p>
+                            <p>This is the repository of garbage classification using yolov5.</p>
+							<p></p>
 							<h3 class="display-55">Overview</h3>
-                            <p>In this repository, I use 3D printing to realize the shell design of the luminous clock, and use arduino to program it, so that the servo can erase the luminous numbers, which is very fun and cute.</p>
-							<p>Different from the original three servo design, the UV light is used instead of the traditional oil-based pen, which reduces the fragrance of pen and ink, but adds a lot of charming light pollution.</p>
-							
+                            <p>The platform is based on self-designed sorting trash cans, with NVIDIA Jetson Xavier NX as the main control, based on yolov5 to realize the intelligent discrimination of four types of urban waste, equipped with a two-degree-of-freedom gimbal to realize the sorting of waste, and can handle two or more types at the same time Sorted storage of garbage. At the same time, the system is connected to a variety of peripherals, including TOF proximity sensors, display screens, etc., to complete garbage full-load detection, visualized UI interface and other functions.</p>
+
                             <h3 class="display-55">Requirements</h3>
 							<ul>
-								<li>Arduino IDE</li>
-								<li>Ardino Nano V3 * 1</li>
-								<li>DS3231 * 1</li>
-								<li>SG90 * 2</li>
-								<li>UV Light Emitting Diode * 1</li>
-								<li>Luminous sticker 10cm*15cm * 1</li>
-								<li>Bracket (3d printed)</li>
+								<li>python : 3.7.11</li>
+								<li>torch : 1.8.0+cu111</li>
 							</ul>
 							
-							<h3 class="display-55">How to use</h3>
-							<h3 class="display-66">Hardware assembly</h3>
-							<p>The servo bracket is from the open source 3d model website thingiverse, and the redundant third servo part is removed, see model.stl file:</p>
-							<img src="gitpro/Plotclock/pic/6.JPG" width=100%/>
+							<h3 class="display-55">Main body</h3>
+							<img src="gitpro/Garbage/3.jpg" width=60%/>
+							<p></p>
+							<h3 class="display-55">Classification</h3>
+							<h3 class="display-66">Can</h3>
+							<img src="gitpro/Garbage/6.jpg" width=60%/>
+							<img src="gitpro/Garbage/4.jpg" width=60%/>
+							<p></p>
+							<h3 class="display-66">Battery</h3>
+							<img src="gitpro/Garbage/9.jpg" width=60%/>
+							<img src="gitpro/Garbage/7.jpg" width=60%/>
+							<p></p>
+							<h3 class="display-66">Cobblestone</h3>
+							<img src="gitpro/Garbage/12.jpg" width=60%/>
+							<img src="gitpro/Garbage/10.jpg" width=60%/>
 							<p></p>
 							
-							<h3 class="display-66">hardware connection</h3>
-							<ul>
-								<li>A5 <---------> DS3231-SCL</li>
-								<li>A4 <---------> DS3231-SDA</li>
-								<li>D6 <---------> left steering gear</li>
-								<li>D5 <---------> right steering gear</li>
-								<li>D12 <---------> LED</li>
-							</ul>
-							<img src="gitpro/Plotclock/pic/5.JPG" width=100%/>
+							<h3 class="display-66">Run simulation</h3>
+							<code>python run_gui.py </code>
 							<p></p>
-							
-							<h3 class="display-55">Import related libraries</h3>
-							<h3 class="display-66">DS3231.h</h3>
-							<p>In the Arduino IDE, select Project - Load Library - Add zip, and add the DS3231.zip file in the project to install.</p>
-							<p>The default library function A4 corresponds to SDA of DS3231, and A5 corresponds to SCL of DS3231</p>
-							<img src="gitpro/Plotclock/pic/2.bmp" width=100%/>
-							<p></p>
-							<p>(The original library function link http://www.rinkydinkelectronics.com/library.php?id=74 ) Some modifications have been made, and some in-class functions have been added.</p>
-							
-							<h3 class="display-66">Timelib.h</h3>
-							<p>In the Arduino IDE, choose Project - Load Libraries - Manage Libraries</p>
-							<img src="gitpro/Plotclock/pic/3.bmp"/>
-							<p></p>
-							<p>Search for Timelib in the library manager and install the first library that pops up.</p>
-							<img src="gitpro/Plotclock/pic/4.bmp"/>
-							<p></p>
-							
-							<h3 class="display-55">Run code</h3>
-							<p>Open plotclock.ino and adjust the relevant model parameters according to the comments. For the first time, please enable the debugging mode, that is, remove the ADJUST comment to debug the position of the servo arm, and remove the GPIO to debug the light-emitting diode.</p>
-							<code>#define normal_mode     // 开启正常模式<br/></code>
-							<code>//#define ADJUST        // 开启调试模式<br/></code>
-							<code>//#define GPIO          // 开启调试模式<br/></code>
-							<code>//#define extra_mode    // 开启额外模式<br/></code>
 
+							
 							<!-- <blockquote>
                                 <em>Donec consectetur arcu eu diam cursus consectetur. Interdum malesuada faucibus. Morbi dapibus eros vitae nisi blandit lacinia.</em>
                             </blockquote> -->
@@ -311,7 +285,7 @@
                         <!-- START: Post Share -->
                         <div class="nk-post-share">
                             <strong>Share:</strong>
-                            <a href="https://github.com/Shimly-2/Plotclock" title="Share page on Github" data-share="Github">@Github</a>
+                            <a href="https://github.com/Shimly-2/garbage-classificatin" title="Share page on Github" data-share="Github">@Github</a>
                             <!-- <a href="#" title="Share page on Gitee" data-share="Gitee">@Gitee</a> -->
                         </div>
                         <!-- END: Post Share -->
@@ -379,7 +353,7 @@
                             <div class="nk-comment-meta">
                                 <div class="nk-comment-name"><a href="#">JYY</a></div>
                                 <div class="nk-comment-reply"><a href="#">Reply</a></div>
-                                <div class="nk-comment-date">27 JANUARY, 2022</div>
+                                <div class="nk-comment-date">14 May, 2021</div>
                             </div>
                             <div class="nk-comment-text">
                                 <p>You are so good! You still have hair!!!</p>
@@ -427,12 +401,12 @@
         <!-- START: Pagination -->
         <div class="nk-pagination nk-pagination-center">
             <div class="container">
-                <a class="nk-pagination-prev" href="Blog_DRL_on_robot.html">
+                <a class="nk-pagination-prev" href="Blog_guide_new.html">
                     <span class="pe-7s-angle-left"></span> Previous Post</a>
                 <a class="nk-pagination-center" href="blog.html">
                     <span class="nk-icon-squares"></span>
                 </a>
-                <a class="nk-pagination-next" href="Blog_Smart_car.html">Next Post <span class="pe-7s-angle-right"></span> </a>
+                <a class="nk-pagination-next" href="Blog_Plotclock.html">Next Post <span class="pe-7s-angle-right"></span> </a>
             </div>
         </div>
         <!-- END: Pagination -->

@@ -47,7 +47,20 @@
     <header class="nk-header">
         <!--
         START: Navbar
-    -->
+    --><style type="text/css">
+	     h3{
+	         width: 280px;
+	         height: 60px;
+	         line-height: 50px;
+	         border:1px solid #CCC;
+	         border-radius: 10px;
+	         box-shadow: 2px 2px 3px #CCC;
+	         text-align: center;
+	         margin: 5px auto;
+			 /* background: #fff; */
+			 font-size: 100%;
+	     }
+	 </style>
         <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top">
             <div class="container">
                 <div class="nk-nav-table">
@@ -55,6 +68,18 @@
                         <img src="assets/images/mylogo_l.png" alt="" width="180" class="nk-nav-logo-onscroll">
                         <img src="assets/images/mylogo_o.png" alt="" width="180">
                     </a>
+					
+					<ul class="nk-nav hidden-md-down" >
+						<li class="active">
+							<h3>
+								<ul class="nk-nav" >
+									<li>
+										<a id="loveTime">本站已经建立：<span></span>天<span></span>小时<span></span>分<span></span>秒 </a>
+									</li>
+								</ul>
+							</h3>
+						</li>
+					</ul>
 
                     <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
                         <li class="active">
@@ -92,7 +117,36 @@
 
     </header>
 
-
+	<script>
+	     var loveTime = document.getElementById("loveTime").getElementsByTagName("span");
+	 
+	     setInterval(function(){
+	         var love = "2022-9-16 00:00:00";
+	         // 声明现在的时间和未来的时间
+	         var onTime = new Date();
+	         var time = new Date(love);
+	         // 获得两个时间差
+	         var num = onTime.getTime()-time.getTime();
+	         // alert(num.substring(0, num.indexOf('-')));
+	         // 计算天数(24小时60分钟60秒*1000毫秒) parseInt()取整
+	         var day = parseInt(num/(24*60*60*1000));
+	         // 获得去除天数后剩余的毫秒数
+	         num = num%(24*60*60*1000);
+	         // 计算小时和获得去除小时后剩余的毫秒数
+	         var hour = parseInt(num/(60*60*1000));
+	         num = num%(60*60*1000);
+	         // 计算分钟和获得去除分钟后剩余的毫秒数  
+	         var minute = parseInt(num/(60*1000));
+	         num = num%(60*1000);
+	         // 计算秒
+	         var seconde = parseInt(num/1000);
+	         // 页面上显示
+	         loveTime[0].innerHTML = day;
+	         loveTime[1].innerHTML = hour;
+	         loveTime[2].innerHTML = minute;
+	         loveTime[3].innerHTML = seconde;
+	     },100)
+	 </script>
 
 
     <!--
@@ -562,7 +616,7 @@
 				    </div>
 				</div>
 				
-				<div class="nk-isotope-item" data-filter="Tool">
+				<!-- <div class="nk-isotope-item" data-filter="Tool">
 				    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1" style="border-radius:2em;">
 				        <a href="game/lover/love/index.html" class="nk-portfolio-item-link"></a>
 				        <div class="nk-portfolio-item-image">
@@ -575,7 +629,7 @@
 				            </div>
 				        </div>
 				    </div>
-				</div>
+				</div> -->
 				
 				<div class="nk-isotope-item" data-filter="Game">
 				    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1" style="border-radius:2em;">
@@ -849,30 +903,6 @@
                             </div>
                         </div>
 						
-						<div>
-						    <div>
-						        <div class="pl-15 pr-15">
-						            <div class="nk-blog-post">
-						                <div class="nk-post-thumb">
-						                    <a href="Blog_guide_camera.html">
-						                        <img src="gitpro/camera/head.jpg" alt="" class="nk-img-stretch">
-						                    </a>
-						                    <div class="nk-post-category"><a href="#">Guide</a></div>
-						                </div>
-						                <h2 class="nk-post-title h4"><a href="Blog_guide_camera.html">2022年10月相机选购指南</a></h2>
-						
-						                <div class="nk-post-date">
-						                    Octorber 20, 2022
-						                </div>
-						
-						                <div class="nk-post-text">
-						                    <p>列举了一些性价比较高的相机，供比较选择，太多了太多了，看的眼麻了</p>
-						                </div>
-						            </div>
-						        </div>
-						        <div class="nk-gap-1"></div>
-						    </div>
-						</div>
 
 
                         <div>
@@ -899,35 +929,8 @@
                                 <div class="nk-gap-1"></div>
                             </div>
                         </div>
-						
-						
 
-
-                        <div>
-                            <div>
-                                <div class="pl-15 pr-15">
-                                    <div class="nk-blog-post">
-                                        <div class="nk-post-thumb">
-                                            <a href="Blog_guide_new.html">
-                                                <img src="gitpro/computer/pic/1.jpg" alt="" class="nk-img-stretch">
-                                            </a>
-                                            <div class="nk-post-category"><a href="#">Guide</a></div>
-                                        </div>
-                                        <h2 class="nk-post-title h4"><a href="Blog_guide_new.html">2022年9月份笔记本选购指南</a></h2>
-
-                                        <div class="nk-post-date">
-                                            September 14, 2022
-                                        </div>
-
-                                        <div class="nk-post-text">
-                                            <p>在这个指南中，借鉴b站及知乎整理了一些你可能会用到的电脑选购信息。如有不准请别打我 :(</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nk-gap-1"></div>
-                            </div>
-                        </div>
-						
+                    
 						<div>
 						    <div>
 						        <div class="pl-15 pr-15">
@@ -952,6 +955,31 @@
 						        <div class="nk-gap-1"></div>
 						    </div>
 						</div>
+						
+						<div>
+						    <div>
+						        <div class="pl-15 pr-15">
+						            <div class="nk-blog-post">
+						                <div class="nk-post-thumb">
+						                    <a href="Blog_garbage_classfication.html">
+						                        <img src="gitpro/Garbage/1.jpg" alt="" class="nk-img-stretch">
+						                    </a>
+						                    <div class="nk-post-category"><a href="#">Design</a></div>
+						                </div>
+						                <h2 class="nk-post-title h4"><a href="Blog_garbage_classfication.html">Garbage Classfication</a></h2>
+						
+						                <div class="nk-post-date">
+						                    May 14, 2021
+						                </div>
+						
+						                <div class="nk-post-text">
+						                    <p>This is the blog of Garbage Classfication using yolov5</p>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="nk-gap-1"></div>
+						    </div>
+						</div>
 
                     </div>
                 </div>
@@ -970,7 +998,7 @@
                     <h2 class="display-4">Contact Info:</h2>
                     <div class="nk-gap mnt-3"></div>
 
-                    <p>I am a third-year student right now, if you are interested in my work, please contact me through my email, mobile phone, etc. I am interested to communicate with you.</p>
+                    <p>I am a fourth-year student right now, if you are interested in my work, please contact me through my email, mobile phone, etc. I am interested to communicate with you.</p>
 
                     <ul class="nk-contact-info">
                         <li>
@@ -1033,7 +1061,7 @@
                     </div>
 
                     <div class="nk-footer-text">
-                        <p>2022 &copy; Design by Shimly-2</p>
+                        <p>2023 &copy; Design by Shimly-2</p>
                     </div>
                 </div>
             </div>

@@ -47,17 +47,42 @@
     <header class="nk-header nk-header-opaque">
         <!--
         START: Navbar
-    -->
-        <nav class="nk-navbar nk-navbar-top">
+    --><style type="text/css">
+         h5{
+             width: 280px;
+             height: 60px;
+             line-height: 50px;
+             border:1px solid #CCC;
+             border-radius: 10px;
+             box-shadow: 2px 2px 3px #CCC;
+             text-align: center;
+             margin: 5px auto;
+    		 /* background: #fff; */
+    		 font-size: 100%;
+         }
+     </style>
+        <nav class="nk-navbar nk-navbar-top nk-navbar-sticky">
             <div class="container">
                 <div class="nk-nav-table">
                     <a href="index.html" class="nk-nav-logo">
                         <img src="assets/images/mylogo_l.png" alt="" width="180" class="nk-nav-logo-onscroll">
                         <img src="assets/images/mylogo_o.png" alt="" width="180">
                     </a>
-
+    				
+    				<ul class="nk-nav hidden-md-down" >
+    					<li class="active">
+    						<h5>
+    							<ul class="nk-nav" >
+    								<li>
+    									<a id="loveTime">本站已经建立：<span></span>天<span></span>小时<span></span>分<span></span>秒 </a>
+    								</li>
+    							</ul>
+    						</h5>
+    					</li>
+    				</ul>
+    
                     <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
-                        <li>
+                        <li class="active">
                             <a href="index.html#about">About</a>
                         </li>
                         <li>
@@ -69,11 +94,11 @@
                         <li>
                             <a href="game.html">Tools &amp; Games</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="blog.html">Blog</a>
                         </li>
                     </ul>
-
+    
                     <ul class="nk-nav nk-nav-right nk-nav-icons">
                         <li class="single-icon hidden-lg-up">
                             <a href="#" class="nk-navbar-full-toggle">
@@ -89,8 +114,40 @@
             </div>
         </nav>
         <!-- END: Navbar -->
-
+    
     </header>
+    
+    <script>
+         var loveTime = document.getElementById("loveTime").getElementsByTagName("span");
+     
+         setInterval(function(){
+             var love = "2022-9-16 00:00:00";
+             // 声明现在的时间和未来的时间
+             var onTime = new Date();
+             var time = new Date(love);
+             // 获得两个时间差
+             var num = onTime.getTime()-time.getTime();
+             // alert(num.substring(0, num.indexOf('-')));
+             // 计算天数(24小时60分钟60秒*1000毫秒) parseInt()取整
+             var day = parseInt(num/(24*60*60*1000));
+             // 获得去除天数后剩余的毫秒数
+             num = num%(24*60*60*1000);
+             // 计算小时和获得去除小时后剩余的毫秒数
+             var hour = parseInt(num/(60*60*1000));
+             num = num%(60*60*1000);
+             // 计算分钟和获得去除分钟后剩余的毫秒数  
+             var minute = parseInt(num/(60*1000));
+             num = num%(60*1000);
+             // 计算秒
+             var seconde = parseInt(num/1000);
+             // 页面上显示
+             loveTime[0].innerHTML = day;
+             loveTime[1].innerHTML = hour;
+             loveTime[2].innerHTML = minute;
+             loveTime[3].innerHTML = seconde;
+         },100)
+     </script>
+    
 
 
 
@@ -220,8 +277,8 @@
                         <!-- START: Post Share -->
                         <div class="nk-post-share">
                             <strong>Share:</strong>
-                            <a href="#" title="Share page on Github" data-share="Github">@Github</a>,
-                            <a href="https://gitee.com/jin-yiyang/Simulate-QQ-chat-room" title="Share page on Gitee" data-share="Gitee">@Gitee</a>
+                            <a href="https://github.com/Shimly-2/QTQQchatroom" title="Share page on Github" data-share="Github">@Github</a>
+                            <!-- <a href="https://gitee.com/jin-yiyang/Simulate-QQ-chat-room" title="Share page on Gitee" data-share="Gitee">@Gitee</a> -->
                         </div>
                         <!-- END: Post Share -->
                     </div>
